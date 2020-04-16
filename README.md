@@ -8,7 +8,7 @@ Step 2: Open "extract_face.py" and execute it.
 Step 3: Check the 2 directories:
   - One directory contains all the forms from which faces extracted succesfully
   - The Second Directory Contains all the Extracted Faces
-  - All the forms that remain in the root directory are failed to be extracted an need manual extraction
+  - All the forms that remain in the root directory are failed to be extracted and need manual extraction
  
 #Additional Dependencies
 OpenCV is Required since the extraction of face is based on image processing that makes.
