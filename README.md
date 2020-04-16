@@ -10,3 +10,7 @@ Step 3: Check the 2 directories:
   - The Second Directory Contains all the Extracted Faces
   - All the forms that remain in the root directory are failed to be extracted an need manual extraction
  
+#Additional Dependencies
+OpenCV is Required since the extraction of face is based on image processing that makes.
+
+Remove or Commment Line 61 of code to prevent Rectengles around images.
