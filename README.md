@@ -13,4 +13,4 @@ Step 3: Check the 2 directories:
 #Additional Dependencies
 OpenCV is Required since the extraction of face is based on image processing that makes.
 
-Remove or Commment Line 61 of code to prevent Rectengles around images.
+Remove or Commment Line 61 of code to prevent Rectangles around images.
