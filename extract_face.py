@@ -16,7 +16,6 @@ start_time = time.time()
 
 
 #Array to store All Valied image file names
-
 images = []
 
 # Find and add all files in directory and append names to the array of files
@@ -46,6 +45,7 @@ for f in images:
     image = cv2.imread(f)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     
+    #Detect the object that is succesfully classified as "Frontal Face" 
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
     faces = faceCascade.detectMultiScale(
         gray,
@@ -57,6 +57,7 @@ for f in images:
     print("[INFO] Found {0} Faces.".format(len(faces)))
     
     for (x, y, w, h) in faces:
+        #Comment the Line Below this to prevent green boxes around output images
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
         roi_color = image[y:y + h, x:x + w]
         print("[INFO] Object found. Saving locally.")
@@ -73,6 +74,6 @@ for f in images:
             shutil.move(f,successDirName+'/'+f)
         except:
             print ("[EXCEPTION] Ignoring the second face in already searched image")
-            
+#Calculate the whole Execution TIme            
 print("[STATUS] Execution Time: --- %s seconds ---" % (time.time() - start_time))
 print ("[DONE] Task Completed Succesfully")
